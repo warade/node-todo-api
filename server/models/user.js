@@ -90,7 +90,6 @@ UserSchema.pre('save', function (next) {
 });
 
 UserSchema.statics.findByCredentials = function(email, password) {
-	console.log(process.env.JWT_SECRET);
 	var User = this;
 	return User.findOne({email}).then((user) => {
 		if(!user) Promise.reject();

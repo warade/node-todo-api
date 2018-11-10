@@ -41,8 +41,6 @@ const populateUsers = (done) => {
 	User.remove({}).then(() => {
 		var userOne = new User(users[0]).save();
 		var userTwo = new User(users[1]).save();
-		// var userOne = User.insertOne(user[0]);
-		// var userTwo = User.insertOne(user[1]);
 		return Promise.all([userOne, userTwo]);
 	}).then(() => done());
 };

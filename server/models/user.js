@@ -33,13 +33,15 @@ var UserSchema = mongoose.Schema({
 		}
 	}]
 });
-
+// this is a method overwrited so that we can change
+// according to our interest what should be sent back to client
+// by sending user object.
 UserSchema.methods.toJSON = function () {
 	var user = this;
 	var userObj = user.toObject();
 	return _.pick(userObj, ['_id', 'email']);
 };
-
+// This is a schema method we created. not overwrited.
 UserSchema.methods.generateAuthToken = function () {
 	var user = this;
 	var access = 'auth';
@@ -77,6 +79,19 @@ UserSchema.pre('save', function (next) {
 	}
 	else next();
 });
+
+UserSchema.statics.findByCredentials = function(email, password) {
+	var User = this;
+	return User.findOne({email}).then((user) => {
+		if(!user) Promise.reject();
+		return new Promise((resolve, reject) => {
+			bcrypt.compare(password, user.password, (err, res) => {
+				if(res) resolve(user);
+				else reject();
+			});
+		});
+	});
+};
 
 var User = mongoose.model('User', UserSchema);
 

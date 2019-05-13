@@ -91,3 +91,11 @@ to get it working.
 * [bcryptjs] - For security.
 * [jsonwebtokens] - For authentication.
 
+
+## For Graphite and Grafana
+
+
+
+# links used
+https://www.vultr.com/docs/how-to-install-and-configure-graphite-on-ubuntu-16-04
+

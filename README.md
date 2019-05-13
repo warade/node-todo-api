@@ -93,6 +93,37 @@ to get it working.
 
 
 ## For Graphite and Grafana
+# Installed graphite using following link 
+https://www.vultr.com/docs/how-to-install-and-configure-graphite-on-ubuntu-16-04
+
+# For Grafana installation
+https://grafana.com/docs/installation/debian/
+
+After these two you need to start apache server
+Installed apache with the following command
+```
+sudo apt-get install apache2 libapache2-mod-wsgi -y
+```
+Copying graphite configuration file to apache
+```
+sudo cp /usr/share/graphite-web/apache2-graphite.conf /etc/apache2/sites-available/
+sudo a2dissite 000-default
+sudo a2ensite apache2-graphite
+```
+After that my nginx was running on port 80 I had to kill it using
+```
+ps -eaf | grep nginx
+sudo kill -9 1764
+```
+See if any process still running
+```
+sudo netstat -tulpn | grep :80
+```
+Restart the apache2 
+```
+sudo systemctl restart apache2
+```
+
 
 
 

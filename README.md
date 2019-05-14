@@ -123,8 +123,30 @@ Restart the apache2
 ```
 sudo systemctl restart apache2
 ```
-
-
+Nothing above was useful
+Used docker instead:
+Used the following link
+https://graphite.readthedocs.io/en/latest/install.html#docker
+Ran the following code:
+```
+docker run -d\
+ --name graphite\
+ --restart=always\
+ -p 80:80\
+ -p 2003-2004:2003-2004\
+ -p 2023-2024:2023-2024\
+ -p 8125:8125/udp\
+ -p 8126:8126\
+ graphiteapp/graphite-statsd
+ ```
+ Used following handy commands:
+ To delete the docker created
+ ```
+ docker system prune
+ ```
+ It ran after some time, maybe docker takes time to start.
+ 
+ Graphite is up running.
 
 
 # links used

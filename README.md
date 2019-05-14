@@ -177,4 +177,5 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-graphite
 https://www.digitalocean.com/community/tutorials/an-introduction-to-tracking-statistics-with-graphite-statsd-and-collectd
 https://grafana.com/docs/installation/configuration/
 https://matt.aimonetti.net/posts/2013/06/26/practical-guide-to-graphite-monitoring/
+https://play.grafana.org/d/000000012/grafana-play-home?orgId=1
 

@@ -163,6 +163,14 @@ which is at, and change type of the database.
 ```
 First, keep in mind that Graphite-web supports Python versions 2.6 to 2.7 and Django versions 1.4 and above.
 
+# Step 4
+We want to send the metric to the graphite server, use graphitesend
+```
+import graphitesend
+g = graphitesend.init(prefix='test', system_name='', graphite_server='127.0.0.1')
+g.send('count', 10)
+```
+
 # links used
 https://www.vultr.com/docs/how-to-install-and-configure-graphite-on-ubuntu-16-04
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-graphite-on-an-ubuntu-14-04-server

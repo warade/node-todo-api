@@ -168,4 +168,5 @@ https://www.vultr.com/docs/how-to-install-and-configure-graphite-on-ubuntu-16-04
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-graphite-on-an-ubuntu-14-04-server
 https://www.digitalocean.com/community/tutorials/an-introduction-to-tracking-statistics-with-graphite-statsd-and-collectd
 https://grafana.com/docs/installation/configuration/
+https://matt.aimonetti.net/posts/2013/06/26/practical-guide-to-graphite-monitoring/
 

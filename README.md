@@ -161,9 +161,11 @@ which is at, and change type of the database.
 ```
 /etc/grafana/grafana.ini
 ```
+First, keep in mind that Graphite-web supports Python versions 2.6 to 2.7 and Django versions 1.4 and above.
 
 # links used
 https://www.vultr.com/docs/how-to-install-and-configure-graphite-on-ubuntu-16-04
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-graphite-on-an-ubuntu-14-04-server
 https://www.digitalocean.com/community/tutorials/an-introduction-to-tracking-statistics-with-graphite-statsd-and-collectd
+https://grafana.com/docs/installation/configuration/
 
